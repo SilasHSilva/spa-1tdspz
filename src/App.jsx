@@ -1,17 +1,15 @@
+import { Outlet } from "react-router-dom";
+import Cabecalho from "./components/Cabecalho";
+import Rodape from "./components/Rodape";
+
 export default function App(){
-  document.title = "Home";
+  document.title = "HOME";
 
   return(
     <div>
-      <h1>App</h1>
-      <div>
-      <figure>
-        <figcaption>
-          Produtos em Oferta...
-        </figcaption>
-        <img src="/img/food.jpg" alt="Produtos diversos" />
-      </figure>
-      </div>
+      <Cabecalho/>
+          <Outlet/>
+      <Rodape/> 
     </div>
   )
 }
